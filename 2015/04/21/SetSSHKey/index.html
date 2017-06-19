@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SetSSHKey | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="添加SSH-Key.1 首先设置你的用户名密码:git config —global user.email “wangfu0806@126.com”git config —global user.name “richiewang”
+2 生成密钥：ssh-keygen -t rsa -C “wangf">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="SetSSHKey"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b8b7003c73b33ea8322329e12c406640";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-04-21T02:52:20.000Z"><a href="/2015/04/21/SetSSHKey/">2015-04-21</a></time>
+      
+      
+  
+    <h1 class="title">SetSSHKey</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="添加SSH-Key-">添加SSH-Key.</h1><h2 id="1_首先设置你的用户名密码:">1 首先设置你的用户名密码:</h2><p>git config —global user.email <em>“wangfu0806@126.com”</em><br>git config —global user.name <strong>“richiewang”</strong></p>
+<h2 id="2_生成密钥：">2 生成密钥：</h2><p>ssh-keygen -t rsa -C “wangfu0806@126.com”</p>
+<h2 id="3_输入文件路径：">3 输入文件路径：</h2><p>H:\hexo\blog&gt;ssh-keygen -t rsa -C “wangfu0806@126.com”<br><em>Generating public/private rsa key pair.
+</em>Enter file in which to save the key (//.ssh/id_rsa): H:\git\myssh\ssh<br><em>Enter passphrase (empty for no passphrase):
+</em>Enter same passphrase again:<br><em>Your identification has been saved in H:\git\myssh\ssh.
+</em>Your public key has been saved in H:\git\myssh\ssh.pub.<br><em>The key fingerprint is:
+</em>b0:0c:2e:67:33:ab:c1:50:10:40:0a:ba:c1:80:59:22 wangfu0806@126.com</p>
+<h4 id="Note1_有个bug,文件路径中的盘符H必须大写,否则会报错-">Note1 有个bug,文件路径中的盘符H必须大写,否则会报错.</h4><h4 id="Note2_上述命令若执行成功,会在H:\git\myssh目录下生成两个文件id_rsa和id_rsa-pub,最后两步:">Note2 上述命令若执行成功,会在H:\git\myssh目录下生成两个文件id_rsa和id_rsa.pub,最后两步:</h4><h2 id="4_用文本编辑器打开ssh-pub文件,拷贝其中的内容,将其添加到Add_SSH_Key">4 用文本编辑器打开ssh.pub文件,拷贝其中的内容,将其添加到Add SSH Key</h2><h2 id="5_将id_rsa和id_rsa-pub拷贝至你Git安装目录下的-ssh目录，&gt;如H:\PortableGit-1-8-4-ssh">5 将id_rsa和id_rsa.pub拷贝至你Git安装目录下的.ssh目录，&gt;如H:\PortableGit-1.8.4.ssh</h2><h5 id="Help_link"><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">Help link</a></h5><p><code>function (version) {
+    return function (scope, elm, attrs) {
+      elm.text(version);
+    };
+  }</code></p>
+<!-- 多说评论框 start -->
+<p>  <div class="ds-thread" data-thread-key="SetSSHKey" data-title="SetSSHKey" data-url="http://localhost:4000/2015/04/21/SetSSHKey/"></div><br><!-- 多说评论框 end --></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"feelll"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜尋">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 John Doe
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
